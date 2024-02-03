@@ -3,4 +3,20 @@
         border-radius: 6px;
         width: fit-content;
     }
+
+    &-item {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px 0 8px;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+
+        &-icon {
+            cursor: pointer;
+        }
+    }
 }

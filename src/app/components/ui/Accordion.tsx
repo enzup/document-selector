@@ -1,28 +1,23 @@
-import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { AccordionDetails, Accordion as AccordionMUI, AccordionSummary } from "@mui/material";
 import "./Accordion.scss";
 
 interface AccordionProps {
-  text: string;
+  buttonText: string;
   content: any;
   isExpanded?: boolean;
+  id?: string;
 }
 
 function Accordion(props: AccordionProps) {
-  const [isExpanded, setIsExpanded] = useState(props.isExpanded || false);
-
   return (
     <div className="accordion-container">
-      <div className="accordion-button" onClick={() => setIsExpanded(!isExpanded)}>
-        <span>{props.text}</span>
-        <span>
-          {!isExpanded && <FontAwesomeIcon icon={faAngleDown} />}
-          {isExpanded && <FontAwesomeIcon icon={faAngleUp} />}
-        </span>
-      </div>
-
-      {isExpanded && <div className="accordion-content">{props.content}</div>}
+      <AccordionMUI>
+        <AccordionSummary className="accordion-button" id={props.id || ""} expandIcon={<ExpandMoreIcon />}>
+          {props.buttonText}
+        </AccordionSummary>
+        <AccordionDetails className="accordion-details">{props.content}</AccordionDetails>
+      </AccordionMUI>
     </div>
   );
 }

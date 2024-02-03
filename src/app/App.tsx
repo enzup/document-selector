@@ -1,10 +1,10 @@
 import "./App.scss";
-import Accordion from "./components/ui/Accordion";
+import Document from "./components/shared/document/Document";
 
 function App() {
   return (
     <div className="App">
-      <Accordion text="Some Text" content={"asdf"}></Accordion>
+      <Document></Document>
     </div>
   );
 }
