@@ -1,10 +1,10 @@
 import "./App.scss";
-import Document from "./components/shared/document/Document";
+import DocumentSelector from "./pages/document-selector/DocumentSelector";
 
 function App() {
   return (
     <div className="App">
-      <Document></Document>
+      <DocumentSelector></DocumentSelector>
     </div>
   );
 }

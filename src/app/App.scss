@@ -1,0 +1,8 @@
+@import "src/app/shared/styles/variables";
+
+.App {
+    background-color: $backgroundColor;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
