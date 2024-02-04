@@ -2,6 +2,8 @@ import { BehaviorSubject } from "rxjs";
 import documentData from "../data/document-data.json";
 import { DocumentGroup, DocumentType } from "../interfaces/documentType";
 
+const originalList = JSON.parse(JSON.stringify(documentData));
+
 export const allDocumentList$ = new BehaviorSubject(documentData);
 export const selectedDocumentList$ = new BehaviorSubject([] as DocumentType[]);
 
@@ -54,6 +56,6 @@ export const selectAllDocuments = () => {
 };
 
 export const removeAllSelectedDocuments = () => {
+	allDocumentList$.next(JSON.parse(JSON.stringify(originalList)));
 	selectedDocumentList$.next([]);
-	allDocumentList$.next(documentData);
 };
