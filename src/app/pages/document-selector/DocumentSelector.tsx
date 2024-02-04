@@ -2,29 +2,29 @@ import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import WestIcon from "@mui/icons-material/West";
 import { useEffect, useState } from "react";
-import DocumentList from "src/app/shared/components/document/document-list/DocumentList";
-import Autocomplete from "src/app/shared/components/wrapper/autocomplete/Autocomplete";
-import SearchInput from "src/app/shared/components/wrapper/search-input/SearchInput";
-import { DocumentType } from "src/app/shared/interfaces/documentType";
-import { documentList$ } from "src/app/shared/utils/SelectedDocument";
+import DocumentList from "../../shared/components/document/document-list/DocumentList";
+import Autocomplete from "../../shared/components/wrapper/autocomplete/Autocomplete";
+import SearchInput from "../../shared/components/wrapper/search-input/SearchInput";
+import { DocumentType } from "../../shared/interfaces/documentType";
+import { removeDocument, selectedDocumentList$ } from "../../shared/utils/DocumentDataService";
 import "./DocumentSelector.scss";
 
 function DocumentSelector() {
   const [documentList, setDocumentList] = useState([] as DocumentType[]);
 
   useEffect(() => {
-    const observable = documentList$.subscribe((documentList: DocumentType[]) => {
-      setDocumentList(documentList);
+    const subscription = selectedDocumentList$.subscribe((documents: DocumentType[]) => {
+      setDocumentList([...documents]);
     });
 
     return () => {
-      observable.unsubscribe();
+      subscription.unsubscribe();
     };
   }, []);
 
-  useEffect(() => {
-    console.log(documentList);
-  }, [documentList]);
+  const onRemoveDocument = (document: DocumentType) => {
+    removeDocument(document);
+  };
 
   return (
     <div className="ds-container">
@@ -55,16 +55,16 @@ function DocumentSelector() {
           </div>
         )}
 
-        {documentList.length && (
+        {!!documentList.length && (
           <div className="ds-selected-list">
             {documentList.map((document: DocumentType) => {
               return (
-                <div className="ds-selected-list-item">
+                <div className="ds-selected-list-item" key={document.id}>
                   <span>
                     <CheckIcon className="ds-selected-list-item-check"></CheckIcon>
                     <span className="bold">{document.text}</span>
                   </span>
-                  <div className="ds-selected-list-item-cancel-container">
+                  <div className="ds-selected-list-item-cancel-container" onClick={() => onRemoveDocument(document)}>
                     <CloseIcon className={"ds-selected-list-item-cancel"}></CloseIcon>
                   </div>
                 </div>

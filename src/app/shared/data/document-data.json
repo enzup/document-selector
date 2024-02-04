@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Drug Policies",
+    "id": "drug_policies",
+    "items": [
+      { "id": "dp_alabama", "text": "Alabama - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_california", "text": "California - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_colorado", "text": "Colorado - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_florida", "text": "Florida - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_illinois", "text": "Illinois - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_kansas", "text": "Kansas - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_ny", "text": "New York - Drug Policies", "parentId": "drug_policies" },
+      { "id": "dp_utah", "text": "Utah - Drug Policies", "parentId": "drug_policies" }
+    ]
+  },
+  {
+    "title": "Employee Handbooks",
+    "id": "employee_handbooks",
+    "items": [
+      { "id": "eh_alabama", "text": "Alabama - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_california", "text": "California - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_colorado", "text": "Colorado - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_florida", "text": "Florida - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_illinois", "text": "Illinois - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_kansas", "text": "Kansas - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_ny", "text": "New York - Employee Handbooks", "parentId": "employee_handbooks" },
+      { "id": "eh_utah", "text": "Utah - Employee Handbooks", "parentId": "employee_handbooks" }
+    ]
+  },
+  {
+    "title": "Equipment Selection",
+    "id": "equipment_selection",
+    "items": [
+      { "id": "es_alabama", "text": "Alabama - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_california", "text": "California - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_colorado", "text": "Colorado - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_florida", "text": "Florida - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_illinois", "text": "Illinois - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_kansas", "text": "Kansas - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_ny", "text": "New York - Equipment Selection", "parentId": "equipment_selection" },
+      { "id": "es_utah", "text": "Utah - Equipment Selection", "parentId": "equipment_selection" }
+    ]
+  },
+  {
+    "title": "Non-Compete Agreements",
+    "id": "non_compete_agreements",
+    "items": [
+      { "id": "nca_alabama", "text": "Alabama - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_california", "text": "California - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_colorado", "text": "Colorado - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_florida", "text": "Florida - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_illinois", "text": "Illinois - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_kansas", "text": "Kansas - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_ny", "text": "New York - Non-Compete Agreements", "parentId": "non_compete_agreements" },
+      { "id": "nca_utah", "text": "Utah - Non-Compete Agreements", "parentId": "non_compete_agreements" }
+    ]
+  },
+  {
+    "title": "Payroll Handbook",
+    "id": "payroll_handbook",
+    "items": [
+      { "id": "ph_alabama", "text": "Alabama - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_california", "text": "California - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_colorado", "text": "Colorado - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_florida", "text": "Florida - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_illinois", "text": "Illinois - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_kansas", "text": "Kansas - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_ny", "text": "New York - Payroll Handbook", "parentId": "payroll_handbook" },
+      { "id": "ph_utah", "text": "Utah - Payroll Handbook", "parentId": "payroll_handbook" }
+    ]
+  },
+  {
+    "title": "PTO Policy",
+    "id": "pto_policy",
+    "items": [
+      { "id": "pp_alabama", "text": "Alabama - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_california", "text": "California - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_colorado", "text": "Colorado - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_florida", "text": "Florida - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_illinois", "text": "Illinois - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_kansas", "text": "Kansas - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_ny", "text": "New York - PTO Policy", "parentId": "pto_policy" },
+      { "id": "pp_utah", "text": "Utah - PTO Policy", "parentId": "pto_policy" }
+    ]
+  },
+  {
+    "title": "Safety Manuals",
+    "id": "safety_manuals",
+    "items": [
+      { "id": "sm_alabama", "text": "Alabama - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_california", "text": "California - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_colorado", "text": "Colorado - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_florida", "text": "Florida - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_illinois", "text": "Illinois - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_kansas", "text": "Kansas - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_ny", "text": "New York - Safety Manuals", "parentId": "safety_manuals" },
+      { "id": "sm_utah", "text": "Utah - Safety Manuals", "parentId": "safety_manuals" }
+    ]
+  },
+  {
+    "title": "Sexual Harassment",
+    "id": "sexual_harassment",
+    "items": [
+      { "id": "sh_alabama", "text": "Alabama - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_california", "text": "California - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_colorado", "text": "Colorado - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_florida", "text": "Florida - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_illinois", "text": "Illinois - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_kansas", "text": "Kansas - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_ny", "text": "New York - Sexual Harassment", "parentId": "sexual_harassment" },
+      { "id": "sh_utah", "text": "Utah - Sexual Harassment", "parentId": "sexual_harassment" }
+    ]
+  }
+]

@@ -3,3 +3,9 @@ export interface DocumentType {
 	text: string;
 	parentId: string;
 }
+
+export interface DocumentGroup {
+	title: string,
+	id: string,
+	items: DocumentType[];
+}
