@@ -1,0 +1,13 @@
+.autocomplete {
+	&-container {
+		.MuiOutlinedInput-root {
+			padding: 0 39px 0 9px !important;
+			height: 38px;
+			border-radius: 8px;
+		}
+
+		input {
+			font-size: 14px;
+		}
+	}
+}

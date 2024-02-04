@@ -1,0 +1,115 @@
+@import "src/app/shared/styles/variables";
+@import "src/app/shared/styles/styles";
+
+$emptyDocument: #f3f4f6;
+$iconColor: #d1d5db;
+$checkColor: #0e9f6e;
+
+.ds {
+	&-container {
+		width: 1024px;
+		min-height: calc(100vh - 32px);
+		display: flex;
+
+		& > div {
+			background-color: #fff;
+			width: 50%;
+			border: 1px solid $borderColor;
+			border-radius: 8px;
+			padding: 16px;
+
+			&:first-child {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&-available {
+		&-filter-group {
+			display: flex;
+			margin: 8px 0;
+
+			& > div {
+				width: 50%;
+
+				&:first-child {
+					margin-right: 16px;
+				}
+			}
+		}
+
+		&-accordion {
+			.MuiAccordion-root {
+				border-radius: 0 !important;
+			}
+			&--first {
+				.MuiAccordion-root {
+					border-radius: 8px 8px 0 0 !important;
+				}
+			}
+			&--last {
+				.MuiAccordion-root {
+					border-radius: 0 0 8px 8px !important;
+				}
+			}
+		}
+	}
+
+	&-selected {
+		display: flex;
+		flex-direction: column;
+
+		&-empty {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: $emptyDocument;
+			height: 100%;
+			border: 1px solid $borderColor;
+			border-radius: 8px;
+
+			&-icon {
+				font-size: 60px !important;
+				margin: 24px 0;
+				color: $iconColor;
+			}
+
+			&-text {
+				font-size: 13px !important;
+				font-weight: 500;
+				text-align: center;
+				padding: 0 40px;
+				color: $tertiaryColor;
+			}
+		}
+
+		&-list {
+			border: 1px solid $checkColor;
+			border-radius: 8px;
+			padding: 0 12px;
+
+			&-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 16px 0;
+
+				&-check {
+					height: 16px !important;
+					color: $checkColor;
+					padding-right: 4px;
+					position: relative;
+					top: 3px;
+				}
+
+				&-cancel {
+					height: 16px !important;
+
+					&-container {
+						@include icon-border;
+					}
+				}
+			}
+		}
+	}
+}

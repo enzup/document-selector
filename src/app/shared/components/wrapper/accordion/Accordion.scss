@@ -1,0 +1,31 @@
+@import "src/app/shared/styles/variables";
+
+.accordion {
+	&-container {
+		border-radius: 6px;
+
+		.MuiAccordion-root {
+			box-shadow: none;
+			border: 1px solid $borderColor;
+			background-color: $backgroundColor;
+		}
+	}
+
+	&-button {
+		height: 56px;
+		min-height: 56px !important;
+		padding: 0 16px;
+
+		&--expanded {
+			border-bottom: 1px solid $borderColor !important;
+		}
+
+		&-icon {
+			color: black;
+		}
+	}
+
+	&-details {
+		padding: 0 !important;
+	}
+}

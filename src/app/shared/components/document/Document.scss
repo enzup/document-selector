@@ -1,0 +1,30 @@
+@import "src/app/shared/styles/variables";
+@import "src/app/shared/styles/styles";
+
+.document {
+	&-container {
+		border-radius: 6px;
+	}
+
+	&-item {
+		background-color: #fff;
+		font-size: 14px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 16px 0 12px;
+
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+
+	&-icon {
+		height: 16px !important;
+
+		&-container {
+			@include icon-border;
+		}
+	}
+}
