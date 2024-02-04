@@ -1,4 +1,8 @@
 {
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 160
+  "editor.wordWrapColumn": 160,
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false
 }
