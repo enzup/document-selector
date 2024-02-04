@@ -1,0 +1,23 @@
+{
+  "jobTemplates": {
+    "options": ["Heavy Equipment Operator", "Equipment Operator", "Track Foreman", "Track Machine Operator", "Grade Foreman"]
+  },
+  "locations": {
+    "options": [
+      "New York, NY",
+      "Los Angeles, LA",
+      "San Francisco, SF",
+      "Miami, MA",
+      "Chicago, IL",
+      "Boston, MA",
+      "Houston, TX",
+      "Austin, TX"
+    ]
+  },
+  "subsidiary": {
+    "options": ["Subsidiary option 1", "Subsidiary option 2", "Subsidiary option 3", "Subsidiary option 4"]
+  },
+  "seniority": {
+    "options": ["Entry-Level Position", "Individual Contributor", "Manager", "Office Staff", "Leadership/Management"]
+  }
+}

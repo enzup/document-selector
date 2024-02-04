@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import DocumentList from "../../shared/components/document/document-list/DocumentList";
 import Autocomplete from "../../shared/components/wrapper/autocomplete/Autocomplete";
 import SearchInput from "../../shared/components/wrapper/search-input/SearchInput";
+import filterData from "../../shared/data/filter-data.json";
 import { DocumentType } from "../../shared/interfaces/documentType";
 import { removeDocument, selectedDocumentList$ } from "../../shared/utils/DocumentDataService";
 import "./DocumentSelector.scss";
@@ -33,12 +34,12 @@ function DocumentSelector() {
         <SearchInput></SearchInput>
         <span className="fs-14 bold">Filter by:</span>
         <div className="ds-available-filter-group">
-          <Autocomplete placeholder="Job Templates"></Autocomplete>
-          <Autocomplete placeholder="Locations"></Autocomplete>
+          <Autocomplete options={filterData.jobTemplates.options} placeholder="Job Templates"></Autocomplete>
+          <Autocomplete options={filterData.locations.options} placeholder="Locations"></Autocomplete>
         </div>
         <div className="ds-available-filter-group">
-          <Autocomplete placeholder="Subsidiary"></Autocomplete>
-          <Autocomplete placeholder="Seniority"></Autocomplete>
+          <Autocomplete options={filterData.subsidiary.options} placeholder="Subsidiary"></Autocomplete>
+          <Autocomplete options={filterData.seniority.options} placeholder="Seniority"></Autocomplete>
         </div>
         <DocumentList></DocumentList>
       </div>
