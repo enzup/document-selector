@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { DocumentGroup, DocumentType } from "../../../interfaces/documentType";
 import { addSelectedDocument, allDocumentList$, removeAllSelectedDocuments, selectAllDocuments } from "../../../utils/DocumentDataService";
+import { labels } from "../../../utils/labels";
 import Switch from "../../wrapper/switch/Switch";
 import Document from "../Document";
 import "./DocumentList.scss";
@@ -40,8 +41,10 @@ function DocumentList() {
   return (
     <div className="document-list-container">
       <div className="document-list-count">
-        <span className="fs-14 bold">{count} Available Documents</span>
-        <Switch label="Select All" onToggle={onDocumentSelectorToggle}></Switch>
+        <span className="fs-14 bold">
+          {count} {labels.documentSelector.availableDocuments}
+        </span>
+        <Switch label={labels.documentSelector.toggleText} onToggle={onDocumentSelectorToggle}></Switch>
       </div>
       {allDocumentList.map((document: DocumentGroup, i) => {
         return (

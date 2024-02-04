@@ -8,6 +8,7 @@ import SearchInput from "../../shared/components/wrapper/search-input/SearchInpu
 import filterData from "../../shared/data/filter-data.json";
 import { DocumentType } from "../../shared/interfaces/documentType";
 import { removeDocument, selectedDocumentList$ } from "../../shared/utils/DocumentDataService";
+import { labels } from "../../shared/utils/labels";
 import "./DocumentSelector.scss";
 
 function DocumentSelector() {
@@ -30,29 +31,27 @@ function DocumentSelector() {
   return (
     <div className="ds-container">
       <div className="ds-available">
-        <span className="bold">Available Documents</span>
+        <span className="bold">{labels.documentSelector.availableDocuments}</span>
         <SearchInput></SearchInput>
-        <span className="fs-14 bold">Filter by:</span>
+        <span className="fs-14 bold">{labels.documentSelector.filterBy}</span>
         <div className="ds-available-filter-group">
-          <Autocomplete options={filterData.jobTemplates.options} placeholder="Job Templates"></Autocomplete>
-          <Autocomplete options={filterData.locations.options} placeholder="Locations"></Autocomplete>
+          <Autocomplete options={filterData.jobTemplates.options} placeholder={labels.documentSelector.jobTemplates}></Autocomplete>
+          <Autocomplete options={filterData.locations.options} placeholder={labels.documentSelector.locations}></Autocomplete>
         </div>
         <div className="ds-available-filter-group">
-          <Autocomplete options={filterData.subsidiary.options} placeholder="Subsidiary"></Autocomplete>
-          <Autocomplete options={filterData.seniority.options} placeholder="Seniority"></Autocomplete>
+          <Autocomplete options={filterData.subsidiary.options} placeholder={labels.documentSelector.subsidiary}></Autocomplete>
+          <Autocomplete options={filterData.seniority.options} placeholder={labels.documentSelector.seniority}></Autocomplete>
         </div>
         <DocumentList></DocumentList>
       </div>
       <div className="ds-selected">
-        <span className="bold">Selected Documents</span>
+        <span className="bold">{labels.documentSelector.selectedDocuments}</span>
         <SearchInput></SearchInput>
 
         {!documentList.length && (
           <div className="ds-selected-empty">
             <WestIcon className="ds-selected-empty-icon"></WestIcon>
-            <span className="ds-selected-empty-text">
-              Select documents from the left panel to have employees review them and provide a signature acknowledging review
-            </span>
+            <span className="ds-selected-empty-text">{labels.documentSelector.emptyText}</span>
           </div>
         )}
 
