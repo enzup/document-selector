@@ -1,6 +1,6 @@
 import { BehaviorSubject } from "rxjs";
 import documentData from "../data/document-data.json";
-import { DocumentType } from "../interfaces/documentType";
+import { DocumentGroup, DocumentType } from "../interfaces/documentType";
 
 export const allDocumentList$ = new BehaviorSubject(documentData);
 export const selectedDocumentList$ = new BehaviorSubject([] as DocumentType[]);
@@ -35,10 +35,25 @@ export const removeDocument = (document: DocumentType) => {
 	allDocumentList$.next(allDocList);
 };
 
-export const setAllSelectedDocuments = (documents: DocumentType[]) => {
-	selectedDocumentList$.next(documents);
+export const selectAllDocuments = () => {
+	const currentSelectedList = selectedDocumentList$.value;
+	const allDocList = allDocumentList$.value;
+	allDocList.forEach((documentGroup: DocumentGroup) => {
+		documentGroup.items.forEach((item) => {
+			currentSelectedList.push(item);
+		});
+	});
+	selectedDocumentList$.next(currentSelectedList);
+	const emptyAllList = allDocList.map(documentGroup => {
+		return {
+			...documentGroup,
+			items: []
+		};
+	});
+	allDocumentList$.next(emptyAllList);
 };
 
-export const removeAllSelectedDocuments = (documents: DocumentType[]) => {
+export const removeAllSelectedDocuments = () => {
 	selectedDocumentList$.next([]);
+	allDocumentList$.next(documentData);
 };

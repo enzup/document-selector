@@ -34,10 +34,18 @@ const IOSSwitch = styled((props: SwitchProps) => <SwitchMUI disableRipple {...pr
   },
 }));
 
-function Switch(props: { label: string }) {
+interface CustomSwitchProps {
+  label: string;
+  onToggle: (checked: boolean) => void;
+}
+
+function Switch(props: CustomSwitchProps) {
   return (
     <div className="switch-container">
-      <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} label={props.label} />
+      <FormControlLabel
+        control={<IOSSwitch sx={{ m: 1 }} onChange={(event) => props.onToggle(event.target.checked)} />}
+        label={props.label}
+      />
     </div>
   );
 }
